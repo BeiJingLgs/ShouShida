@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/hanvon_100dp">
 
+    <include
+        layout="@layout/toolbar"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hanvon_20dp"
+            android:text="欢迎来到乐智阅读"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/hanvon_80sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/hanvon_50dp"
+            android:paddingRight="@dimen/hanvon_50dp"
+            android:layout_marginTop="@dimen/hanvon_50dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pass_login"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pass_login"
+                    android:textSize="@dimen/hanvon_50sp" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/hanvon_20dp"
+                    android:layout_marginRight="@dimen/hanvon_20dp"
+                    android:background="@color/colorBlack" />
+                <TextView
+                    android:id="@+id/sms_login"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sms_login"
+                    android:textSize="@dimen/hanvon_50sp" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/hanvon_50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/hanvon_50sp"
+                    android:hint="请输入手机号" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/hanvon_50dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/hanvon_50sp"
+                    android:hint="请输入密码" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/hanvon_20dp"
+                android:layout_marginTop="@dimen/hanvon_20dp"
+                android:layout_gravity="right"
+                android:textSize="@dimen/hanvon_50sp"
+                android:text="@string/wangji_pass" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/user_login"
+            android:layout_marginTop="@dimen/hanvon_50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/hanvon_50sp"
+            android:padding="@dimen/hanvon_30dp"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/register_Student"
+            android:layout_marginTop="@dimen/hanvon_50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/hanvon_40sp"
+            android:padding="@dimen/hanvon_30dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/register_student" />
+    </LinearLayout>
 </LinearLayout>
